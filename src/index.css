@@ -1,0 +1,17 @@
+
+*{
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+}
+body,html,main{
+  width: 100vw;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  justify-content: flex-start;
+  background-color:#eee;
+}
+
