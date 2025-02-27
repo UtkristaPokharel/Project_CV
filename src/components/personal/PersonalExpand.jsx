@@ -60,6 +60,5 @@ import { InputGroup } from "../InputGroup"
 			    data-key="address"
 			/>
 		</div>
-
 	)
 }

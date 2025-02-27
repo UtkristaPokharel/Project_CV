@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {ExperienceInfo} from './ExperienceInfo';
 
 export function Experience() {
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -16,7 +17,7 @@ export function Experience() {
 	    <h2>Experience <span className='arrow-down'><FontAwesomeIcon icon={faAngleDown} className={` angle-down ${isExpanded?'':'open'}`} /></span> </h2>
 	    </div>
 	    
-	    {/* {isExpanded && <EducationInfo  />} */}
+	    {isExpanded && <ExperienceInfo  />}
 	  </div>
 	  </div>
 	);

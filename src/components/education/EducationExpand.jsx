@@ -4,7 +4,7 @@ import { InputGroup } from "../InputGroup"
 // export function EducationExpand(education) {
 export function EducationExpand(education, updateEducation, deleteEducation, clearEducation) {
 	const [formData, setFormData] = useState({
-		SchoolName: education.Name,
+		SchoolName: education.SchoolName,
 		Degree: education.Degree,
 		startDate: education.startDate,
 		endDate: education.endDate,
@@ -13,7 +13,7 @@ export function EducationExpand(education, updateEducation, deleteEducation, cle
 
 	useEffect(() => {
 		setFormData({
-			SchoolName: education.Name,
+			SchoolName: education.SchoolName,
 			Degree: education.Degree,
 			startDate: education.startDate,
 			endDate: education.endDate,
@@ -34,7 +34,7 @@ export function EducationExpand(education, updateEducation, deleteEducation, cle
 				id="SchoolName"
 				labelText="School Name"
 				placeholder="Enter Your School Name"
-				value={formData.Name}
+				value={formData.SchoolName}
 				onChange={(e) => handleChange(e, 'SchoolName')}
 				data-key="SchoolName"
 			/>
