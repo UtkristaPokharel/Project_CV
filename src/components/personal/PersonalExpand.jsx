@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { InputGroup } from "../InputGroup"
 
 	export function PersonalExpand(personal) {
-	// export function PersonalExpand(personal,updatePersonal,deletePersonal,clearPersonal) {
 	const [formData, setFormData] = useState({
 		Name: personal.Name,
 		Email: personal.Email,
@@ -60,17 +59,6 @@ import { InputGroup } from "../InputGroup"
 			    onChange={(e)=>handleChange(e,"address")}
 			    data-key="address"
 			/>
-			{/* <div className="Form-button">
-				<button type="button" onClick={() => deletePersonal(personal.id)}>
-					Delete
-				</button>
-				<button type="button" onClick={() => clearPersonal(personal.id)}>
-					Clear
-				</button>
-				<button type="button" onClick={() => updatePersonal(personal.id, formData)}>
-					Save
-				</button>
-			</div> */}
 		</div>
 
 	)
