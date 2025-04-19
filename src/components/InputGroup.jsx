@@ -41,7 +41,7 @@ export function InputGroup({
   );
 }
 
-// ✅ Add PropTypes for validation
+// Add PropTypes for validation
 InputGroup.propTypes = {
   id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
@@ -54,7 +54,7 @@ InputGroup.propTypes = {
   "data-key": PropTypes.string, // Since it's a special prop name, use quotes
 };
 
-// ✅ Define default props (optional)
+// Define default props 
 InputGroup.defaultProps = {
   placeholder: "",
   value: "",

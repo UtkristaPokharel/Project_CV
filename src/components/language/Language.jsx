@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { InputGroup } from "../InputGroup"
 import "../../styles/form.css";
 
-export function Language(updateLanguage, deleteLanguage) {
+export function Language(language, updateLanguage, deleteLanguage) {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [Language, setLanguage] = useState('');
+	const [formData, setFormData] = useState({
+		LanguageName: language.LanguageName
+	});
+	useEffect(() => {
+		setFormData({
+			LanguageName: language.Name,
+		});
+	}, [language]);
 	const [level, setLevel] = useState('');
 
 	const toggleExpand = () => {
@@ -30,7 +38,7 @@ export function Language(updateLanguage, deleteLanguage) {
 							id="language"
 							labelText="Language"
 							placeholder="Enter Your Language"
-							value={Language}
+							value={formData.Language}
 							onChange={(e) => setLanguage(e, Language)}
 							data-key="Language"
 						/>
@@ -71,11 +79,11 @@ export function Language(updateLanguage, deleteLanguage) {
 							</div>
 						</div>
 						<div className="Form-button">
-							<button type="button" onClick={() => updateLanguage(Language.id)}>
-								Update
+							<button type="button" onClick={() => updateLanguage(Language.id, formData)}>
+								Add
 							</button>
 							<button type="button" onClick={() => deleteLanguage(Language.id)}>
-								Delete
+								Cancel
 							</button>
 						</div>
 					</div>
