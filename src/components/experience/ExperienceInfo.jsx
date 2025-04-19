@@ -1,9 +1,9 @@
-import { ExperienceExpand } from "./ExperienceExpand";
+// import { ExperienceExpand } from "./ExperienceExpand";
 
-export function ExperienceInfo() {
-  return (
-    <div>
-	 <ExperienceExpand/>
-    </div>
-  );
-}
+// export function ExperienceInfo() {
+//   return (
+//     <div>
+// 	 <ExperienceExpand/>
+//     </div>
+//   );
+// }
